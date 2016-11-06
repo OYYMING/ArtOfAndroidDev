@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.artofandroiddev">
+
+    <!-- 用于AIDLService中的onTransact的权限验证 -->
+    <uses-permission android:name="com.example.assistantapp.permission.ACCESS_USER_SERVICE" />
+
+    <!-- 用于MyContentProvider的权限验证 -->
+    <uses-permission android:name="com.example.assistantapp.PROVIDER" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".base.MainActivity"
+            android:label="MainActivity">
+
+            <!-- android:excludeFromRecents="true">  加上这行，会导致应用不出现在最近使用的应用的窗口里 -->
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".chapter1.Chapter1MainActivity"
+            android:label="Chapter1MainActivity" />
+        <activity
+            android:name=".chapter2.Chapter2MainActivity"
+            android:label="Chapter2MainActivity" />
+        <activity
+            android:name=".chapter1.TransparentActivity"
+            android:label="TransparentActivity"
+            android:theme="@style/AppTheme.Transparent" />
+        <activity
+            android:name=".chapter2.AIDLClientActivity"
+            android:label="AIDLClientActivity" />
+        <activity
+            android:name=".chapter1.SerializeActivity"
+            android:label="SerializeActivity" />
+
+        <service
+            android:name=".chapter2.Messenger.MessengerService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":messenger" />
+
+        <activity android:name=".chapter2.Messenger.MessengerClientActivity" />
+        <activity android:name=".chapter2.ProviderActivity" />
+        <activity android:name=".chapter2.BinderPool.BinderPoolActivity"></activity>
+    </application>
+
+</manifest>
