@@ -3,40 +3,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".chapter2.Chapter2MainActivity">
-
+    android:orientation="vertical"
+    tools:context=".chapter2.SharedPreference.SharedPreferenceActivity">
+    <TextView
+        android:id="@+id/tv_shared_preference_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/et_shared_preference_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Input A New Value"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="showAIDLClientActivity"
-        android:text="showAIDLClientActivity" />
-
+        android:text="更新"
+        android:onClick="updateValueLocally"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="showMessengerClientActivity"
-        android:text="showMessengerClientActivity" />
-
-    <Button
+        android:text="从Service中取值"
+        android:onClick="getValueFromService"/>
+    <TextView
+        android:id="@+id/tv_shared_preference_value2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="showProviderActivity"
-        android:text="showProviderActivity" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="showBinderPoolActivity"
-        android:text="showBinderPoolActivity" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="showSharedPreferenceActivity"
-        android:text="showSharedPreferenceActivity" />
+        />
 </LinearLayout>

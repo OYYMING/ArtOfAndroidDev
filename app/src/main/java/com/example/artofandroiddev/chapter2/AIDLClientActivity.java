@@ -17,7 +17,7 @@ import android.view.View;
 
 import com.example.artofandroiddev.R;
 import com.example.artofandroiddev.base.Constant;
-import com.example.artofandroiddev.base.Util;
+import com.example.artofandroiddev.util.ToastUtils;
 import com.example.assistantapp.IOnUserAddedListener;
 import com.example.assistantapp.IUserManager;
 import com.example.assistantapp.User;
@@ -79,7 +79,7 @@ public class AIDLClientActivity extends AppCompatActivity {
 
             getUserList();
 
-            Util.alert(AIDLClientActivity.this, "service binding succeed");
+            ToastUtils.alert(AIDLClientActivity.this, "service binding succeed");
         }
 
         /*
@@ -141,7 +141,7 @@ public class AIDLClientActivity extends AppCompatActivity {
         mIsBound = true;
 
         if (mUserManager != null && mUserManager.asBinder().isBinderAlive()) {
-            Util.alert(this, "You have bound the service yet");
+            ToastUtils.alert(this, "You have bound the service yet");
             return;
         }
 
@@ -158,7 +158,7 @@ public class AIDLClientActivity extends AppCompatActivity {
         try {
             age = Integer.parseInt(mAcet_age.getText().toString());
         } catch (NumberFormatException e) {
-            Util.alert(this, "Age can not be empty");
+            ToastUtils.alert(this, "Age can not be empty");
             return;
         }
 
@@ -170,7 +170,7 @@ public class AIDLClientActivity extends AppCompatActivity {
         try {
             age = Integer.parseInt(mAcet_age.getText().toString());
         } catch (NumberFormatException e) {
-            Util.alert(this, "Age can not be empty");
+            ToastUtils.alert(this, "Age can not be empty");
             return;
         }
 
@@ -250,7 +250,7 @@ public class AIDLClientActivity extends AppCompatActivity {
                         }
                     });
         } else {
-            Util.alert(this, "Service has not been bound yet.Please bind first");
+            ToastUtils.alert(this, "Service has not been bound yet.Please bind first");
         }
     }
 
@@ -287,7 +287,7 @@ public class AIDLClientActivity extends AppCompatActivity {
                         }
                     });
         } else {
-            Util.alert(this, "Service has not been bound yet.Please bind first");
+            ToastUtils.alert(this, "Service has not been bound yet.Please bind first");
         }
     }
 
@@ -297,12 +297,12 @@ public class AIDLClientActivity extends AppCompatActivity {
                 mUserManager.registerListener(mListener);
                 Log.d(TAG, "Listener has been registered successfully");
 
-                Util.alert(AIDLClientActivity.this, "Listener has been registered successfully");
+                ToastUtils.alert(AIDLClientActivity.this, "Listener has been registered successfully");
             } catch (RemoteException e) {
                 e.printStackTrace();
             }
         } else {
-            Util.alert(this, "Service has not been bound yet.Please bind first");
+            ToastUtils.alert(this, "Service has not been bound yet.Please bind first");
         }
     }
 
@@ -312,12 +312,12 @@ public class AIDLClientActivity extends AppCompatActivity {
                 mUserManager.unregisterListener(mListener);
                 Log.d(TAG, "Listener has been unregistered successfully");
 
-                Util.alert(AIDLClientActivity.this, "Listener has been unregistered successfully");
+                ToastUtils.alert(AIDLClientActivity.this, "Listener has been unregistered successfully");
             } catch (RemoteException e) {
                 e.printStackTrace();
             }
         } else {
-            Util.alert(this, "Service has not been bound yet.Please bind first");
+            ToastUtils.alert(this, "Service has not been bound yet.Please bind first");
         }
     }
 

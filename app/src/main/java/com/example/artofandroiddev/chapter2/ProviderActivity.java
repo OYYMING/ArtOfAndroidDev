@@ -3,6 +3,7 @@ package com.example.artofandroiddev.chapter2;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Process;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
@@ -11,12 +12,13 @@ import android.os.Bundle;
 import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.AppCompatRadioButton;
 import android.support.v7.widget.ListViewCompat;
+import android.util.Log;
 import android.view.View;
 import android.widget.SimpleCursorAdapter;
 
 import com.example.artofandroiddev.R;
 import com.example.artofandroiddev.base.Constant;
-import com.example.artofandroiddev.base.Util;
+import com.example.artofandroiddev.util.ToastUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -67,6 +69,8 @@ public class ProviderActivity extends AppCompatActivity implements LoaderManager
 
         mAdapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_2, null, PROJECTION, new int[]{android.R.id.text1, android.R.id.text2});
         mListView.setAdapter(mAdapter);
+
+        Log.d("ContentProvider","ProviderActivity_PID:" + Process.myPid());
     }
 
     /*
@@ -109,12 +113,18 @@ public class ProviderActivity extends AppCompatActivity implements LoaderManager
 
     }
 
+    /*
+    应该使用异步操作因为provider可能很耗时
+     */
     protected void delete(View view) {
         Uri uri = getLoaderUri();
         getContentResolver().delete(uri, "_id=? and name=?", new String[]{mId.getText().toString(), mName.getText().toString()});
         initOrRestartLoader();
     }
 
+    /*
+    应该使用异步操作因为provider可能很耗时
+     */
     protected void update(View view) {
         ContentValues values = wrapContentValues();
         if (values == null)
@@ -125,6 +135,9 @@ public class ProviderActivity extends AppCompatActivity implements LoaderManager
         initOrRestartLoader();
     }
 
+    /*
+    应该使用异步操作因为provider可能很耗时
+     */
     protected void retrieve(View view) {
         Uri uri = getLoaderUri();
         getContentResolver().query(uri, PROJECTION, null, null, null);
@@ -137,7 +150,7 @@ public class ProviderActivity extends AppCompatActivity implements LoaderManager
         try {
             id = Integer.parseInt(mId.getText() != null ? mId.getText().toString() : "0");
         } catch (Exception e) {
-            Util.alert(this, "_id cannot be parsed as an integer value");
+            ToastUtils.alert(this, "_id cannot be parsed as an integer value");
             return null;
         }
 

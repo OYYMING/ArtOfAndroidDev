@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.assistantapp">
+    package="com.example.assistantapp"
+    >
 
     <permission
         android:name="com.example.assistantapp.permission.ACCESS_USER_SERVICE"
@@ -16,7 +17,8 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        >
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,7 +43,11 @@
         <provider
             android:name=".chapter2.MyContentProvider"
             android:authorities="com.example.assistantapp.provider"
-            android:permission="com.example.assistantapp.PROVIDER" />
+            android:permission="com.example.assistantapp.PROVIDER"
+            android:exported="true"
+            android:enabled="true"/>
+            <!--android:multiprocess="true"-->
+            <!--android:process=":pp"-->
 
         <service
             android:name=".chapter2.BinderPoolService"

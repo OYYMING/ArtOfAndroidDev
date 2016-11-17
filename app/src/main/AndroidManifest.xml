@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.artofandroiddev">
+    package="com.example.artofandroiddev"
+    android:sharedUserId="com.example.shareduid">
 
     <!-- 用于AIDLService中的onTransact的权限验证 -->
     <uses-permission android:name="com.example.assistantapp.permission.ACCESS_USER_SERVICE" />
@@ -28,7 +29,8 @@
         </activity>
         <activity
             android:name=".chapter1.Chapter1MainActivity"
-            android:label="Chapter1MainActivity" />
+            android:label="Chapter1MainActivity"
+            android:process="oyym.myp" />
         <activity
             android:name=".chapter2.Chapter2MainActivity"
             android:label="Chapter2MainActivity" />
@@ -51,7 +53,21 @@
 
         <activity android:name=".chapter2.Messenger.MessengerClientActivity" />
         <activity android:name=".chapter2.ProviderActivity" />
-        <activity android:name=".chapter2.BinderPool.BinderPoolActivity"></activity>
+        <activity android:name=".chapter2.BinderPool.BinderPoolActivity" />
+        <activity android:name=".chapter2.SharedPreference.SharedPreferenceActivity" />
+
+        <service
+            android:name=".chapter2.SharedPreference.SharedPreferenceService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":sharedPreference" />
+
+        <activity android:name=".chapter3.Chapter3MainActivity" />
+        <activity android:name=".chapter3.RepeatedInterceptActivity" />
+        <activity android:name=".chapter3.velocity.VelocityTrackerActivity" />
+        <activity android:name=".chapter3.AnimatorActivity" />
+        <activity android:name=".chapter3.diforientationconflict.HorizontalScrollViewActivity" />
+        <activity android:name=".chapter3.sameorientationconflict.StickyLayoutActivity" />
     </application>
 
 </manifest>

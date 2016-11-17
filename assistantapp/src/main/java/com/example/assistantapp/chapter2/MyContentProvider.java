@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
+import android.os.Process;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
@@ -54,13 +55,15 @@ public class MyContentProvider extends ContentProvider {
         mDb.execSQL("insert into " + DbHelper.TABLE_NAME_BOOK + " values(2,'Android OS');");
         mDb.execSQL("insert into " + DbHelper.TABLE_NAME_USER + " values(1,'Judith');");
         mDb.execSQL("insert into " + DbHelper.TABLE_NAME_USER + " values(2,'Laden');");
+
+        Log.d("ContentProvider","ContentProvider_onCreate_PID:" + Process.myPid());
     }
 
     @Nullable
     @Override
     public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
         Log.d(TAG, "query()");
-
+        Log.d("ContentProvider","ContentProvider_query_PID:" + Process.myPid());
         String tableName = getTableName(uri);
         if (tableName == null) {
             throw new IllegalArgumentException("Unsupported URI:" + uri);
@@ -82,6 +85,7 @@ public class MyContentProvider extends ContentProvider {
     public Uri insert(Uri uri, ContentValues values) {
         Log.d(TAG, "insert()");
         try {
+            //故意sleep两秒，模拟耗时操作
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();

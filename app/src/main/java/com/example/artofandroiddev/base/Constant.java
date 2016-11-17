@@ -17,4 +17,14 @@ public class Constant {
     public static final String BOOK_PROVIDER_URISTR = "content://com.example.assistantapp.provider/book";
 
     public static final String USER_PROVIDER_URISTR = "content://com.example.assistantapp.provider/user";
+
+    public static class SharedPreference {
+        public static final int MSG_GET_VALUE = 10004;
+
+        public static final int MSG_VALUE_RESULT = 10005;
+
+        public static final String MSG_KEY_REQUEST = "MSG_KEY_REQUEST";
+
+        public static final String MSG_KEY_REPLY = "MSG_KEY_REPLY";
+    }
 }

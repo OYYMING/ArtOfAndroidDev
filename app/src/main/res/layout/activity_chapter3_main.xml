@@ -8,35 +8,36 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".chapter2.Chapter2MainActivity">
+    tools:context="com.example.artofandroiddev.chapter3.Chapter3MainActivity">
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="showAIDLClientActivity"
-        android:text="showAIDLClientActivity" />
+        android:onClick="showRepeatedInterceptActivity"
+        android:text="showRepeatedInterceptActivity" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="showMessengerClientActivity"
-        android:text="showMessengerClientActivity" />
+        android:onClick="showVelocityTrackerActivity"
+        android:text="showVelocityTrackerActivity" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="showProviderActivity"
-        android:text="showProviderActivity" />
+        android:onClick="showAnimatorActivity"
+        android:text="showAnimatorActivity" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="showBinderPoolActivity"
-        android:text="showBinderPoolActivity" />
+        android:onClick="showHorizontalScrollViewActivity"
+        android:text="showHorizontalScrollViewActivity" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="showSharedPreferenceActivity"
-        android:text="showSharedPreferenceActivity" />
+        android:onClick="showStickyLayoutActivity"
+        android:text="showStickyLayoutActivity" />
+
 </LinearLayout>

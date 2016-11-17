@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ArtOfAndroidDev</string>
+
+    <string name="shared_preference_value">Activity中的SharedPreference取出的指为：%1$s</string>
+    <string name="shared_preference_service_value">Service中的SharedPreference取出的指为：%1$s</string>
+
+    <string name="velocity_per_unit">%1$spx/%2$dms</string>
 </resources>

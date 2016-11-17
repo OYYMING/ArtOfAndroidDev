@@ -8,6 +8,7 @@ import android.view.View;
 import com.example.artofandroiddev.R;
 import com.example.artofandroiddev.chapter2.BinderPool.BinderPoolActivity;
 import com.example.artofandroiddev.chapter2.Messenger.MessengerClientActivity;
+import com.example.artofandroiddev.chapter2.SharedPreference.SharedPreferenceActivity;
 
 public class Chapter2MainActivity extends AppCompatActivity {
 
@@ -34,6 +35,11 @@ public class Chapter2MainActivity extends AppCompatActivity {
 
     protected void showBinderPoolActivity(View view) {
         Intent intent = new Intent(this,BinderPoolActivity.class);
+        this.startActivity(intent);
+    }
+
+    protected void showSharedPreferenceActivity(View view) {
+        Intent intent = new Intent(this,SharedPreferenceActivity.class);
         this.startActivity(intent);
     }
 }

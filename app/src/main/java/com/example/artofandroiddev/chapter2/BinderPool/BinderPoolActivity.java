@@ -1,6 +1,5 @@
 package com.example.artofandroiddev.chapter2.BinderPool;
 
-import android.os.Binder;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.support.v7.app.AppCompatActivity;
@@ -10,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.artofandroiddev.R;
-import com.example.artofandroiddev.base.Util;
+import com.example.artofandroiddev.util.ToastUtils;
 import com.example.assistantapp.AIDLConstant;
 import com.example.assistantapp.ISecurityCenter;
 
@@ -18,8 +17,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import rx.Observable;
 import rx.Subscriber;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Action0;
 import rx.functions.Action1;
 import rx.schedulers.Schedulers;
 
@@ -52,7 +49,7 @@ public class BinderPoolActivity extends AppCompatActivity {
                         BinderPoolActivity.this.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                Util.alert(BinderPoolActivity.this.getApplicationContext(), "The encrypted String is \n" + encryptedStr);
+                                ToastUtils.alert(BinderPoolActivity.this.getApplicationContext(), "The encrypted String is \n" + encryptedStr);
                             }
                         });
                     } catch (RemoteException e) {
@@ -85,7 +82,7 @@ public class BinderPoolActivity extends AppCompatActivity {
                 .doOnNext(new Action1<BinderPool>() {
                     @Override
                     public void call(BinderPool binderPool) {
-                        //Util.alert(BinderPoolActivity.this,"BinderPool installation succeeded");
+                        //ToastUtils.alert(BinderPoolActivity.this,"BinderPool installation succeeded");
                     }
                 })
                 .subscribe(action1);
