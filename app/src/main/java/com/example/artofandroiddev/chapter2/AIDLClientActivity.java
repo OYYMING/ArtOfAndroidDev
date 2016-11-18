@@ -17,7 +17,7 @@ import android.view.View;
 
 import com.example.artofandroiddev.R;
 import com.example.artofandroiddev.base.Constant;
-import com.example.artofandroiddev.util.ToastUtils;
+import com.example.artofandroiddev.utils.ToastUtils;
 import com.example.assistantapp.IOnUserAddedListener;
 import com.example.assistantapp.IUserManager;
 import com.example.assistantapp.User;

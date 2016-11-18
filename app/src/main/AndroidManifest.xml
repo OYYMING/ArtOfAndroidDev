@@ -63,7 +63,7 @@
             android:process=":sharedPreference" />
 
         <activity android:name=".chapter3.Chapter3MainActivity" />
-        <activity android:name=".chapter3.RepeatedInterceptActivity" />
+        <activity android:name=".chapter3.repeatedintercepttouchevent.RepeatedInterceptActivity" />
         <activity android:name=".chapter3.velocity.VelocityTrackerActivity" />
         <activity android:name=".chapter3.AnimatorActivity" />
         <activity android:name=".chapter3.diforientationconflict.HorizontalScrollViewActivity" />

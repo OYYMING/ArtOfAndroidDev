@@ -1,8 +1,6 @@
-package com.example.artofandroiddev.util;
+package com.example.artofandroiddev.utils;
 
-import android.app.Activity;
 import android.content.Context;
-import android.text.BoringLayout;
 import android.util.DisplayMetrics;
 
 /**

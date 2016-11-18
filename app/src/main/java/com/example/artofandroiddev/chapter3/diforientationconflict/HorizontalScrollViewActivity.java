@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.example.artofandroiddev.R;
 import com.example.artofandroiddev.base.DummyContent;
-import com.example.artofandroiddev.util.MyViewUtils;
+import com.example.artofandroiddev.utils.MyViewUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

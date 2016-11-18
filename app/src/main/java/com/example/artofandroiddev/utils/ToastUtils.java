@@ -1,4 +1,4 @@
-package com.example.artofandroiddev.util;
+package com.example.artofandroiddev.utils;
 
 import android.content.Context;
 import android.widget.Toast;

@@ -2,13 +2,12 @@ package com.example.artofandroiddev.chapter3.diforientationconflict;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
 import android.widget.LinearLayout;
 import android.widget.Scroller;
 
-import com.example.artofandroiddev.util.MyViewUtils;
+import com.example.artofandroiddev.utils.MyViewUtils;
 
 /**
  * HorizontalScrollViewEx是作者所说的外部拦截法的示例

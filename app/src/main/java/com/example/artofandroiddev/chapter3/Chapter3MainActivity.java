@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.example.artofandroiddev.R;
 import com.example.artofandroiddev.chapter3.diforientationconflict.HorizontalScrollViewActivity;
+import com.example.artofandroiddev.chapter3.repeatedintercepttouchevent.RepeatedInterceptActivity;
 import com.example.artofandroiddev.chapter3.sameorientationconflict.StickyLayoutActivity;
 import com.example.artofandroiddev.chapter3.velocity.VelocityTrackerActivity;
 

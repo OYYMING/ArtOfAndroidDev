@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.artofandroiddev.R;
-import com.example.artofandroiddev.util.ToastUtils;
+import com.example.artofandroiddev.utils.ToastUtils;
 import com.example.assistantapp.AIDLConstant;
 import com.example.assistantapp.ISecurityCenter;
 
