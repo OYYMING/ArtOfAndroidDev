@@ -11,6 +11,7 @@ import com.example.artofandroiddev.R;
 import com.example.artofandroiddev.chapter1.Chapter1MainActivity;
 import com.example.artofandroiddev.chapter2.Chapter2MainActivity;
 import com.example.artofandroiddev.chapter3.Chapter3MainActivity;
+import com.example.artofandroiddev.chapter4.Chapter4MainActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,5 +32,9 @@ public class MainActivity extends AppCompatActivity {
 
     protected void showChapter3(View view) {
         this.startActivity(new Intent(this, Chapter3MainActivity.class));
+    }
+
+    protected void showChapter4(View view) {
+        this.startActivity(new Intent(this, Chapter4MainActivity.class));
     }
 }

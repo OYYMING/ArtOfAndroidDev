@@ -28,4 +28,10 @@
         android:layout_height="wrap_content"
         android:onClick="showChapter3"
         android:text="Chapter3" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showChapter4"
+        android:text="Chapter4" />
 </LinearLayout>
