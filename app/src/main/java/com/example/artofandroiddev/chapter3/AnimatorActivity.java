@@ -17,6 +17,7 @@ import butterknife.ButterKnife;
 
 /**
  * 本Activity演示利用ValueAnimator的AnimatorUpdateListener，同时对多个View的动画进行控制
+ * 可以通过拖拽改变两个圆的初始位置
  */
 public class AnimatorActivity extends AppCompatActivity {
     private static final String TAG = AnimatorActivity.class.toString();
