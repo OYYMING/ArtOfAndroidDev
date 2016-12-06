@@ -18,27 +18,27 @@ public class Chapter2MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chapter2_main);
     }
 
-    protected void showAIDLClientActivity(View view) {
+    public void showAIDLClientActivity(View view) {
         Intent intent = new Intent(this,AIDLClientActivity.class);
         this.startActivity(intent);
     }
 
-    protected void showMessengerClientActivity(View view) {
+    public void showMessengerClientActivity(View view) {
         Intent intent = new Intent(this,MessengerClientActivity.class);
         this.startActivity(intent);
     }
 
-    protected void showProviderActivity(View view) {
+    public void showProviderActivity(View view) {
         Intent intent = new Intent(this,ProviderActivity.class);
         this.startActivity(intent);
     }
 
-    protected void showBinderPoolActivity(View view) {
+    public void showBinderPoolActivity(View view) {
         Intent intent = new Intent(this,BinderPoolActivity.class);
         this.startActivity(intent);
     }
 
-    protected void showSharedPreferenceActivity(View view) {
+    public void showSharedPreferenceActivity(View view) {
         Intent intent = new Intent(this,SharedPreferenceActivity.class);
         this.startActivity(intent);
     }

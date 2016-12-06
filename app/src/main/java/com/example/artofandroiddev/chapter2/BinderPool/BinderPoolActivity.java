@@ -35,7 +35,7 @@ public class BinderPoolActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    protected void querySecurityBinder(View view) {
+    public void querySecurityBinder(View view) {
         doAfterInitializeBinderPool(new Action1<BinderPool>() {
             @Override
             public void call(BinderPool binderPool) {

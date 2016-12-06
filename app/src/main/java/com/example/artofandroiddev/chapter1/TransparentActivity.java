@@ -16,7 +16,7 @@ public class TransparentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_transparent);
     }
 
-    protected void showReparentableActivity(View view)
+    public void showReparentableActivity(View view)
     {
         Intent intent = new Intent();
         intent.setComponent(new ComponentName("com.example.assistantapp","com.example.assistantapp.chapter1.ReparentableActivity"));

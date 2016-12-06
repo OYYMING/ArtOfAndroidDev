@@ -87,14 +87,14 @@ public class SharedPreferenceActivity extends AppCompatActivity {
         }
     }
 
-    protected void updateValueLocally(View view) {
+    public void updateValueLocally(View view) {
         Log.d("SharedPreference", "SharedPreferenceActivity_Thread: " + Process.myPid());
         SharedPreferenceManager.setString(this, Constant.SharedPreference.MSG_KEY_REQUEST, mEditText.getText().toString());
         String compositeStr = String.format(this.getString(R.string.shared_preference_value), SharedPreferenceManager.getString(this, Constant.SharedPreference.MSG_KEY_REQUEST, null));
         mTextView.setText(compositeStr);
     }
 
-    protected void getValueFromService(View view) {
+    public void getValueFromService(View view) {
         if (mMessenger == null) {
             Intent intent = new Intent(this, SharedPreferenceService.class);
             this.bindService(intent, mServiceConnection, BIND_AUTO_CREATE);

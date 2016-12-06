@@ -32,7 +32,7 @@ public class SerializeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_serialize);
     }
 
-    protected void serializeUser(View view) {
+    public void serializeUser(View view) {
         try {
             Log.d(TAG, "User waiting for serialization : " + mSerializedUser.toString() + "\n");
 
@@ -46,7 +46,7 @@ public class SerializeActivity extends AppCompatActivity {
         }
     }
 
-    protected void deserializeUser(View view) {
+    public void deserializeUser(View view) {
         try {
             ObjectInputStream stream = new ObjectInputStream(new FileInputStream(this.getFilesDir().getPath().toString() + "/cache.txt"));
             User user = (User) stream.readObject();

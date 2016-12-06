@@ -22,19 +22,19 @@ public class MainActivity extends AppCompatActivity {
         Log.d("SharedUID", "APP_Process:" + Process.myPid());
     }
 
-    protected void showChapter1(View view) {
+    public void showChapter1(View view) {
         this.startActivity(new Intent(this, Chapter1MainActivity.class));
     }
 
-    protected void showChapter2(View view) {
+    public void showChapter2(View view) {
         this.startActivity(new Intent(this, Chapter2MainActivity.class));
     }
 
-    protected void showChapter3(View view) {
+    public void showChapter3(View view) {
         this.startActivity(new Intent(this, Chapter3MainActivity.class));
     }
 
-    protected void showChapter4(View view) {
+    public void showChapter4(View view) {
         this.startActivity(new Intent(this, Chapter4MainActivity.class));
     }
 }

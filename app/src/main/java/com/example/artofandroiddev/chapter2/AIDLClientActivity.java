@@ -133,7 +133,7 @@ public class AIDLClientActivity extends AppCompatActivity {
         }
     }
 
-    protected void bindService(View view) {
+    public void bindService(View view) {
         bindService();
     }
 
@@ -153,7 +153,7 @@ public class AIDLClientActivity extends AppCompatActivity {
         this.bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
     }
 
-    protected void addUser(View view) {
+    public void addUser(View view) {
         int age = 0;
         try {
             age = Integer.parseInt(mAcet_age.getText().toString());
@@ -165,7 +165,7 @@ public class AIDLClientActivity extends AppCompatActivity {
         this.addUser(new User(mAcet_name.getText().toString(), age));
     }
 
-    protected void addUserOut(View view) {
+    public void addUserOut(View view) {
         int age = 0;
         try {
             age = Integer.parseInt(mAcet_age.getText().toString());
@@ -291,7 +291,7 @@ public class AIDLClientActivity extends AppCompatActivity {
         }
     }
 
-    protected void registerListener(View view) {
+    public void registerListener(View view) {
         if (mUserManager != null && mUserManager.asBinder().isBinderAlive()) {
             try {
                 mUserManager.registerListener(mListener);
@@ -306,7 +306,7 @@ public class AIDLClientActivity extends AppCompatActivity {
         }
     }
 
-    protected void unregisterListener(View view) {
+    public void unregisterListener(View view) {
         if (mUserManager != null && mUserManager.asBinder().isBinderAlive()) {
             try {
                 mUserManager.unregisterListener(mListener);

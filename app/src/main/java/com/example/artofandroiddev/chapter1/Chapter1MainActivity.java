@@ -40,13 +40,13 @@ public class Chapter1MainActivity extends AppCompatActivity {
         Log.d(TAG, "onSaveInstanceState is triggered");
     }
 
-    protected void showTransparentActivity(View view) {
+    public void showTransparentActivity(View view) {
         Intent intent = new Intent(this,TransparentActivity.class);
         this.startActivity(intent);
     }
 
 
-    protected void showSerializeActivity(View view) {
+    public void showSerializeActivity(View view) {
         Intent intent = new Intent(this,SerializeActivity.class);
         this.startActivity(intent);
     }

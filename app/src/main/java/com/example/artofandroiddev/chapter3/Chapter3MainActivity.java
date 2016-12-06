@@ -19,27 +19,27 @@ public class Chapter3MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chapter3_main);
     }
 
-    protected void showRepeatedInterceptActivity(View view) {
+    public void showRepeatedInterceptActivity(View view) {
         Intent intent = new Intent(this, RepeatedInterceptActivity.class);
         this.startActivity(intent);
     }
 
-    protected void showVelocityTrackerActivity(View view) {
+    public void showVelocityTrackerActivity(View view) {
         Intent intent = new Intent(this, VelocityTrackerActivity.class);
         this.startActivity(intent);
     }
 
-    protected void showAnimatorActivity(View view) {
+    public void showAnimatorActivity(View view) {
         Intent intent = new Intent(this, AnimatorActivity.class);
         this.startActivity(intent);
     }
 
-    protected void showHorizontalScrollViewActivity(View view) {
+    public void showHorizontalScrollViewActivity(View view) {
         Intent intent = new Intent(this, HorizontalScrollViewActivity.class);
         this.startActivity(intent);
     }
 
-    protected void showStickyLayoutActivity(View view) {
+    public void showStickyLayoutActivity(View view) {
         Intent intent = new Intent(this, StickyLayoutActivity.class);
         this.startActivity(intent);
     }

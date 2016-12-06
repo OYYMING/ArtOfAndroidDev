@@ -61,7 +61,7 @@ public class AnimatorActivity extends AppCompatActivity {
      * 交换两个圆的位置，一个圆沿着直线向对方移动，另一个圆沿着两点确认的圆的圆周向对方移动
      * @param view
      */
-    protected void exchangePos(View view) {
+    public void exchangePos(View view) {
         if (animator.isRunning())
             return;
 

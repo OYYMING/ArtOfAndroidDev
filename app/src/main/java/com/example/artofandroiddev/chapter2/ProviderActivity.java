@@ -76,7 +76,7 @@ public class ProviderActivity extends AppCompatActivity implements LoaderManager
     /*
     应该使用异步操作因为provider可能很耗时
      */
-    protected void insert(View view) {
+    public void insert(View view) {
         Observable.create(new Observable.OnSubscribe<Uri>() {
             @Override
             public void call(Subscriber<? super Uri> subscriber) {
@@ -116,7 +116,7 @@ public class ProviderActivity extends AppCompatActivity implements LoaderManager
     /*
     应该使用异步操作因为provider可能很耗时
      */
-    protected void delete(View view) {
+    public void delete(View view) {
         Uri uri = getLoaderUri();
         getContentResolver().delete(uri, "_id=? and name=?", new String[]{mId.getText().toString(), mName.getText().toString()});
         initOrRestartLoader();
@@ -125,7 +125,7 @@ public class ProviderActivity extends AppCompatActivity implements LoaderManager
     /*
     应该使用异步操作因为provider可能很耗时
      */
-    protected void update(View view) {
+    public void update(View view) {
         ContentValues values = wrapContentValues();
         if (values == null)
             return;
@@ -138,7 +138,7 @@ public class ProviderActivity extends AppCompatActivity implements LoaderManager
     /*
     应该使用异步操作因为provider可能很耗时
      */
-    protected void retrieve(View view) {
+    public void retrieve(View view) {
         Uri uri = getLoaderUri();
         getContentResolver().query(uri, PROJECTION, null, null, null);
         initOrRestartLoader();
