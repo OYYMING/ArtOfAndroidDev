@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.example.artofandroiddev.chapter4.flowlayout.FlowLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_green_light"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            tools:context="com.example.artofandroiddev.chapter4.flowlayout.FlowLayoutActivity">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginRight="29dp"
+                android:background="@android:color/holo_red_light"
+                android:text="1"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="@android:color/holo_orange_dark"
+                android:text="2\nmatch_parent"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@android:color/holo_red_light"
+                android:text="3"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@android:color/holo_red_light"
+                android:text="4"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:background="@android:color/holo_red_light"
+                android:text="5"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:background="@android:color/holo_red_light"
+                android:text="6"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:background="@android:color/holo_red_light"
+                android:text="7"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:background="@android:color/holo_red_light"
+                android:text="8"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:background="@android:color/holo_red_light"
+                android:text="9"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:background="@android:color/holo_red_light"
+                android:text="10"
+                android:textColor="#000"
+                android:textSize="20sp" />
+        </com.example.artofandroiddev.chapter4.flowlayout.FlowLayout>
+        <com.example.artofandroiddev.chapter4.flowlayout.FlowLayout
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:background="@android:color/darker_gray"
+            tools:context="com.example.artofandroiddev.chapter4.flowlayout.FlowLayoutActivity">
+            <TextView
+                style="@style/keyword_style"
+                android:text="这是一个"/>
+            <TextView
+                style="@style/keyword_style"
+                android:text="长度"/>
+            <TextView
+                style="@style/keyword_style"
+                android:text="固定为"/>
+            <TextView
+                style="@style/keyword_style"
+                android:text="220dp"/>
+            <TextView
+                style="@style/keyword_style"
+                android:text="的"/>
+            <TextView
+                style="@style/keyword_style"
+                android:text="FlowLayout"/>
+        </com.example.artofandroiddev.chapter4.flowlayout.FlowLayout>
+        <com.example.artofandroiddev.chapter4.flowlayout.FlowLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:background="@android:color/darker_gray"
+            tools:context="com.example.artofandroiddev.chapter4.flowlayout.FlowLayoutActivity">
+            <TextView
+                style="@style/keyword_style"
+                android:text="Android"/>
+            <TextView
+                style="@style/keyword_style"
+                android:text="iOS"/>
+            <TextView
+                style="@style/keyword_style"
+                android:text="Python"/>
+            <TextView
+                style="@style/keyword_style"
+                android:text="C"/>
+            <TextView
+                style="@style/keyword_style"
+                android:text="C#"/>
+            <TextView
+                style="@style/keyword_style"
+                android:text="IntelliJ"/>
+            <TextView
+                style="@style/keyword_style"
+                android:text="Better Call Saul"/>
+            <TextView
+                style="@style/keyword_style"
+                android:text="Breaking Bad"/>
+            <TextView
+                style="@style/keyword_style"
+                android:text="What The Fxxk"/>
+            <TextView
+                style="@style/keyword_style"
+                android:text="This is an example for wrap_content"/>
+        </com.example.artofandroiddev.chapter4.flowlayout.FlowLayout>
+    </LinearLayout>
+</ScrollView>
+

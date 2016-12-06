@@ -69,7 +69,10 @@
         <activity android:name=".chapter3.diforientationconflict.HorizontalScrollViewActivity" />
         <activity android:name=".chapter3.sameorientationconflict.StickyLayoutActivity" />
         <activity android:name=".chapter4.circularimageview.CircularImageViewActivity" />
-        <activity android:name=".chapter4.Chapter4MainActivity"></activity>
+        <activity android:name=".chapter4.Chapter4MainActivity" />
+        <activity android:name=".chapter4.flowlayout.FlowLayoutActivity" />
+        <activity android:name=".chapter4.testadjustviewbounds.AdjustViewBoundsActivity" />
+        <activity android:name=".chapter4.focuschange.FocusChangedActivity"></activity>
     </application>
 
 </manifest>
