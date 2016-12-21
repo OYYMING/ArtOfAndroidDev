@@ -72,7 +72,9 @@
         <activity android:name=".chapter4.Chapter4MainActivity" />
         <activity android:name=".chapter4.flowlayout.FlowLayoutActivity" />
         <activity android:name=".chapter4.testadjustviewbounds.AdjustViewBoundsActivity" />
-        <activity android:name=".chapter4.focuschange.FocusChangedActivity"></activity>
+        <activity android:name=".chapter4.focuschange.FocusChangedActivity" />
+        <activity android:name=".chapter6.Chapter6MainActivity" />
+        <activity android:name=".chapter6.drawablestate.MySpinnerActivity"></activity>
     </application>
 
 </manifest>

@@ -11,4 +11,10 @@
         <attr name="borderWidth" format="dimension"/>
         <attr name="borderColor" format="color"/>
     </declare-styleable>
+
+    <!--MySpinner的属性-->
+    <declare-styleable name="MySpinner">
+        <!--是否展开-->
+        <attr name="state_expanded" format="boolean"/>
+    </declare-styleable>
 </resources>

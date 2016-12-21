@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--返回的动画写在前面-->
+    <set
+        android:duration="500"
+        android:startOffset="500">
+        <!--旋转的动画写在前面-->
+        <rotate
+            android:fromDegrees="360"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:toDegrees="0" />
+        <!--移动的动画写在后面-->
+        <translate
+            android:fillAfter="true"
+            android:fromXDelta="0%"
+            android:fromYDelta="0%"
+            android:toXDelta="-200%"
+            android:toYDelta="-300%" />
+    </set>
+    <!--飞出的动画写在后面-->
+    <set android:duration="500">
+        <rotate
+            android:fromDegrees="0"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:toDegrees="360" />
+        <translate
+            android:fillAfter="true"
+            android:fromXDelta="0%"
+            android:fromYDelta="0%"
+            android:toXDelta="200%"
+            android:toYDelta="300%" />
+    </set>
+</set>
